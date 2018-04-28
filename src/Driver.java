@@ -25,6 +25,8 @@ public class Driver {
             System.out.println(s);
         }
 
+        System.out.println(tree.contains("Good Evening"));
+
 
     }
 
@@ -47,4 +49,6 @@ public class Driver {
 //            }
         }
     }
+
+
 }

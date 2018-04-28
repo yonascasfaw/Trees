@@ -1,5 +1,6 @@
 public class TextTree {
     public WordNode root;
+    private int size = 1;
 
     public TextTree(){
         this.root = new WordNode("");
@@ -28,6 +29,7 @@ public class TextTree {
 
                 WordNode newnode = new WordNode(words[i]);
 
+                this.size++;
                 currentNode.insert(newnode);
                 currentNode = newnode;
                 addedNode = true;
@@ -69,11 +71,7 @@ public class TextTree {
     }
 
     public int size() {
-        int numberOfNodes = 0;
-
-        //code for calculating the number of nodes;
-
-        return numberOfNodes;
+        return this.size;
     }
 
 //    public iterator<String> iterator() {
