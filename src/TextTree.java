@@ -64,10 +64,33 @@ public class TextTree {
     }
 
     public int height() {
-        int treeHeight = 0;
-        // code for calculating tree height
+//        int treeHeight = 0;
+//        WordNode currentNode = root;
+//        while(currentNode.children != null) {
+//            for (int i = 0; i < currentNode.children.size(); i++) {
+//                treeHeight++;
+//                currentNode = currentNode.children.get(i);
+//                break;
+//            }
+//        }
+//
+//        return treeHeight;
+        return getMaxHeight(this.root);
+    }
+    private int getMaxHeight(WordNode node){
+        if (node.isLeaf()){
+            return 0;
+        }
 
-        return treeHeight;
+        int maxHeight = 0;
+
+        for (int i =0 ; i < node.children.size(); i++){
+            int h = 1 + getMaxHeight(node.children.get(i));
+            if (h > maxHeight) {
+                maxHeight = h;
+            }
+        }
+        return maxHeight;
     }
 
     public int size() {

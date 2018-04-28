@@ -27,6 +27,7 @@ public class Driver {
 
         System.out.println(tree.contains("Good Evening"));
 
+        System.out.println(tree.height());
 
     }
 
