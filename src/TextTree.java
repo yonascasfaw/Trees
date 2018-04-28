@@ -1,8 +1,8 @@
 public class TextTree {
-    private WordNode root;
+    public WordNode root;
 
     public TextTree(){
-
+        this.root = new WordNode("");
     }
 
     public boolean add(String sentence) {
@@ -39,10 +39,26 @@ public class TextTree {
     }
 
     public boolean contains(String sentence) {
-        boolean exists = false;
-        //code for checking if value exists
+        boolean contains = true;
+        String[] word = sentence.split(" ");
 
-        return exists;
+        WordNode currentNode = root;
+
+        for(int i=0; i< word.length;i++){
+            boolean foundWord = false;
+            for(int j=0; j<currentNode.children.size();j++) {
+                if (word[i].equals(currentNode.children.get(j).word)) {
+                    foundWord = true;
+                    currentNode = currentNode.children.get(j);
+                    break;
+                }
+            }
+            if (!foundWord){
+                return false;
+            }
+
+        }
+        return contains;
     }
 
     public int height() {
