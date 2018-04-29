@@ -1,3 +1,11 @@
+/**
+ * Authors : Yonas Asfaw & Daniel Cervantes
+ *
+ * Santa Monica College
+ * CS 20B–Data Structures with Java
+ * Programming Project #3
+ */
+
 public class TextTree implements Iterable{
     public WordNode root;
     private int size = 1;
@@ -24,8 +32,6 @@ public class TextTree implements Iterable{
             }
 
             if (found == false) {
-                // Create the new Node
-                // Add new node as child to the node
 
                 WordNode newnode = new WordNode(words[i]);
 
@@ -40,6 +46,7 @@ public class TextTree implements Iterable{
         return addedNode;
     }
 
+    //checks of sentence is in tree
     public boolean contains(String sentence) {
         boolean contains = true;
         String[] word = sentence.split(" ");
@@ -63,20 +70,12 @@ public class TextTree implements Iterable{
         return contains;
     }
 
+    //calculates height of tree
     public int height() {
-//        int treeHeight = 0;
-//        WordNode currentNode = root;
-//        while(currentNode.children != null) {
-//            for (int i = 0; i < currentNode.children.size(); i++) {
-//                treeHeight++;
-//                currentNode = currentNode.children.get(i);
-//                break;
-//            }
-//        }
-//
-//        return treeHeight;
         return getMaxHeight(this.root);
     }
+
+    //helper method for height()
     private int getMaxHeight(WordNode node){
         if (node.isLeaf()){
             return 0;

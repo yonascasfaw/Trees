@@ -1,3 +1,11 @@
+/**
+ * Authors : Yonas Asfaw & Daniel Cervantes
+ *
+ * Santa Monica College
+ * CS 20B–Data Structures with Java
+ * Programming Project #3
+ */
+
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.ListIterator;
@@ -17,6 +25,7 @@ public class LeafIterator implements Iterator<String>{
         queue.add(root);
     }
 
+    //Checks if there is next leaf
     @Override
     public boolean hasNext() {
         for (WordNode w : queue){
@@ -44,9 +53,10 @@ public class LeafIterator implements Iterator<String>{
 
 
         return false;
-        
+
     }
 
+    //returns the next leaf
     @Override
     public String next() {
 

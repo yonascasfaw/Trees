@@ -1,3 +1,11 @@
+/**
+ * Authors : Yonas Asfaw & Daniel Cervantes
+ *
+ * Santa Monica College
+ * CS 20B–Data Structures with Java
+ * Programming Project #3
+ */
+
 import java.util.ArrayList;
 
 public class Run {
@@ -15,18 +23,24 @@ public class Run {
 
         ArrayList<String> list= new ArrayList<>();
 
+        //Prints out all the sentences
+
         getAllSent(tree.root,list,"");
 
         for (String s: list){
             System.out.println(s);
         }
 
+        //test contains
+
         System.out.println("Contains 'Good Evening': " + tree.contains("Good Evening"));
 
+        //calculate the height
 
         System.out.println("Tree Height: " + tree.height());
 
 
+        //iterate over the leafs
         System.out.println("For each loop. Printing leaf of trees");
         for(Object word: tree) {
             System.out.println(word);

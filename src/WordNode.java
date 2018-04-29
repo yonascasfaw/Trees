@@ -1,3 +1,11 @@
+/**
+ * Authors : Yonas Asfaw & Daniel Cervantes
+ *
+ * Santa Monica College
+ * CS 20B–Data Structures with Java
+ * Programming Project #3
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +18,7 @@ public class WordNode {
         children = new ArrayList<WordNode>();
     }
 
+    //checks if current node is leaf
     public boolean isLeaf() {
         if (children.isEmpty()){
             return true;
