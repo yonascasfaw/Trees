@@ -1,4 +1,4 @@
-public class TextTree {
+public class TextTree implements Iterable{
     public WordNode root;
     private int size = 1;
 
@@ -97,7 +97,8 @@ public class TextTree {
         return this.size;
     }
 
-//    public iterator<String> iterator() {
-//
-//    }
+    public LeafIterator iterator() {
+
+        return new LeafIterator(root);
+    }
 }
