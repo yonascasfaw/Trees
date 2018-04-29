@@ -42,30 +42,9 @@ public class LeafIterator implements Iterator<String>{
         }
 
 
-//        iter = queue.listIterator();
-//        while (iter.hasNext()){
-//            WordNode n = iter.next();
-//
-//            if (!n.isLeaf()){
-//                for (int i =0; i< n.children.size();i++){
-//                    queue.add(n.children.get(i));
-//                }
-//            }
-//            else {
-//                return true;
-//            }
-//        }
-        return false;
 
-//
-//        if (this.current == null) {
-//            if (!this.current.children.isEmpty()) {
-//                return true;
-//            }
-//        }
-//
-//        if(this.current ==)
-//        return true;
+        return false;
+        
     }
 
     @Override

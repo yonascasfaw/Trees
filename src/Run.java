@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Driver {
+public class Run {
     public static void main (String args[]){
 
         TextTree tree = new TextTree();
@@ -12,10 +12,6 @@ public class Driver {
         tree.add("Today is Thursday");
         tree.add("Today, its raining");
 
-//        for (int i=0; i < tree.root.children.size();i++){
-//
-//            System.out.println(tree.root.children.get(i));
-//        }
 
         ArrayList<String> list= new ArrayList<>();
 
@@ -25,9 +21,16 @@ public class Driver {
             System.out.println(s);
         }
 
-        System.out.println(tree.contains("Good Evening"));
+        System.out.println("Contains 'Good Evening': " + tree.contains("Good Evening"));
 
-        System.out.println(tree.height());
+
+        System.out.println("Tree Height: " + tree.height());
+
+
+        System.out.println("For each loop. Printing leaf of trees");
+        for(Object word: tree) {
+            System.out.println(word);
+        }
 
     }
 
